@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra Collections</title>
+    <!--TailwindCss Link Connection-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet"></head>
+</head>
+<body>
+
+    <!--Short Ad sale nav-section--->
+    <div id="C_salebar" class="m-2  flex justify-center bg-cyan-950 h-auto w-auto p-1">
+        <div class="flex w-auto border border-white gap-16 text-white font-semibold text-2xl  ">
+            <p>Sign Up and GET 20%OFF For Your First Order</p>
+            <div id="C_close">X</div>
+        </div>
+    </div>
+
+    <!--Main nav-bar -->
+    <div class="sticky top-0 z-50 flex m-2 w-auto bg-gray-200 p-4  items-center justify-between">
+        <div class="text-2xl font-bold border border-black ml-2 ">NOSTRA</div>
+
+        <div class=" flex gap-7 items-center border border-black mr-2 font-medium ">
+            <p id="home"><a class="hover:underline hover:text-black" href="C:\Users\--HRISHI--\OneDrive\Desktop\-FullstackDevProgram-EMC\Nostra project\nostra.html">Home</a></p>
+            <p><a class="hover:underline hover:text-black" href="C:\Users\--HRISHI--\OneDrive\Desktop\-FullstackDevProgram-EMC\Nostra project\contact.html">Contact Us</a></p>
+            <a href="#" class="flex items-center gap-1 hover:underline hover:text-black">
+                <span>ViewCart</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 56 56">
+	            <path d="M0 0h56v56H0z" fill="none" />
+	            <path fill="currentColor" d="M20.008 39.649H47.36c.913 0 1.71-.75 1.71-1.758s-.797-1.758-1.71-1.758H20.406c-1.336 0-2.156-.938-2.367-2.367l-.375-2.461h29.742c3.422 0 5.18-2.11 5.672-5.461l1.875-12.399a7 7 0 0 0 .094-.89c0-1.125-.844-1.899-2.133-1.899H14.641l-.446-2.976c-.234-1.805-.89-2.72-3.28-2.72H2.687c-.937 0-1.734.822-1.734 1.76c0 .96.797 1.781 1.735 1.781h7.921l3.75 25.734c.493 3.328 2.25 5.414 5.649 5.414m31.054-25.454L49.4 25.422c-.188 1.453-.961 2.344-2.344 2.344l-29.906.023l-1.993-13.594ZM21.86 51.04a3.766 3.766 0 0 0 3.797-3.797a3.78 3.78 0 0 0-3.797-3.797c-2.132 0-3.82 1.688-3.82 3.797c0 2.133 1.688 3.797 3.82 3.797m21.914 0c2.133 0 3.82-1.664 3.82-3.797c0-2.11-1.687-3.797-3.82-3.797c-2.109 0-3.82 1.688-3.82 3.797c0 2.133 1.711 3.797 3.82 3.797" />
+                </svg>
+            </a> 
+        </div>
+    </div>
+
+    <!-------------------------SideFilter div(+)Serach div-------------------------------------------->
+    <div class="m-2 flex justify-between w-auto h-auto border border-black"><!--Main container-->
+
+            <div class=" m-1 w-auto h-auto border-r-4 border-black p-5"><!--filter div-->
+                
+                <section class=" mt-7 font-semibold  border border-black ">
+                <p class="text-2xl font-medium">Occasion</p>
+                </section>
+                <section class=" mt-3 font-semibold  border border-black">
+                <list>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="occasioncheck" value="Party">Party</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="occasioncheck" value="Summer">Summer</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="occasioncheck" value="Beach">Beach</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="occasioncheck" value="Wedding">Wedding</li>
+                    </ul>
+                </list>
+                </section>
+                
+
+                <section class=" mt-7 font-semibold border border-black">
+                <p class="text-2xl font-medium">Gender</p>
+                </section>
+                <section class=" mt-3 font-semibold  border border-black">
+                <list>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="gendercheck" value="Men">Mens</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="gendercheck" value="Women">Womens</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="gendercheck" value="Unisex">Others</li>
+                    </ul>
+                </list>
+                </section>
+
+                <section class=" mt-7 font-semibold border border-black">
+                <p class="text-2xl font-medium">Colors</p>
+                </section>
+                <section class=" mt-3 font-semibold  border border-black">
+                <list>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="colorcheck" value="Red">Red</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="colorcheck" value="Green">Green</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="colorcheck" value="Blue">Blue</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="colorcheck" value="White">White</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="colorcheck" value="Yellow">Yellow</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="colorcheck" value="Black">Black</li>
+                    </ul>
+                </list>
+                </section>
+                
+
+                <section class=" mt-7 font-semibold border border-black">
+                <p class="text-2xl font-medium">PriceRange</p>
+                </section>
+                <section class=" mt-3 font-semibold  border border-black">
+                <list>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="pricerangecheck" value="2000 - 2500">2000 - 2500</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="pricerangecheck" value="1500 - 2000">1500 - 2000</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="pricerangecheck" value="1000 - 1500">1000 - 1500</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="pricerangecheck" value="500 - 1000">500 - 1000</li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" class="mr-1" name="pricerangecheck" value="Below 500">Below 500</li>
+                    </ul>
+                </list>
+                </section>
+
+                <section class=" mt-7  text-center font-semibold">
+                <button id="clearall" class="p-2 bg-gray-300 border border-black">Clear All</button>
+                </section>
+                
+            
+            </div> 
+
+            <!---------------------serach container div----------------------------------------->
+            <div class=" mt-7 w-auto h-auto border border-black">
+                
+                <div class="relative flex m-1 items-center"><!--searchbox-->
+                    <input  id="searchinput" type="text" placeholder="Search for t-shirts,shirts and more..." class="p-1 font-medium box-border w-full h-auto rounded border border-black">
+                    
+                    <span class="absolute  right-1 top-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><g fill="#000" fill-rule="evenodd">
+                    <path d="M11 17a6 6 0 1 0 0-12a6 6 0 0 0 0 12m0 2a8 8 0 1 0 0-16a8 8 0 0 0 0 16"/>
+                    <path d="M15.32 15.29a1 1 0 0 1 1.414.005l3.975 4a1 1 0 0 1-1.418 1.41l-3.975-4a1 1 0 0 1 .004-1.414Z"/></g>
+                    </svg>
+                    </span>
+                </div>
+
+                <div  class="m-1  grid grid-cols-4 gap-2 w-auto h-auto border border-black "><!--Dress-GRID-div-->
+
+                    <div id="mens_party_1" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_party_1_image" src="./images/P1.png" alt="partwear">
+                        <p id="mens_party_1_price" >490</p>
+                        <span id="mens_party_1_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_party_1_color" class="bg-blue-700 border-2 rounded p-1 font-bold">Blue</span>
+                        <span id="mens_party_1_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="mens_party_2" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_party_2_image" src="./images/P2.png" alt="partwear">
+                        <p id="mens_party_2_price">490</p>
+                        <span id="mens_party_2_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_party_2_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="mens_party_2_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="mens_party_3" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_party_3_image" src="./images/P3.png" alt="partwear">
+                        <p id="mens_party_3_price">490</p>
+                        <span id="mens_party_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_party_3_color" class="bg-black text-white border-2 rounded p-1 ">Black</span>
+                        <span id="mens_party_3_occasion" class="bg-gray-300 border-2  rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="mens_party_4" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_party_4_image" src="./images/P4.png" alt="partwear">
+                        <p id="mens_party_4_price">490</p>
+                        <span id="mens_party_4_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_party_4_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="mens_party_4_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="mens_beach_1" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_beach_1_image" src="./images/B1.png" alt="beachwear">
+                        <p id="mens_beach_1_price">590</p>
+                        <span id="mens_beach_1_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_beach_1_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="mens_beach_1_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="mens_beach_2" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_beach_2_image" src="./images/B1.png" alt="beachwear">
+                        <p id="mens_beach_2_price" >590</p>
+                        <span id="mens_beach_2_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_beach_2_color" class="bg-yellow-300 border-2 rounded p-1 font-bold">yellow</span>
+                        <span id="mens_beach_2_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="mens_beach_3"class="m-1 border border-black h-auto p-1">
+                        <img id="mens_beach_3_image" src="./images/B1.png" alt="beachwear">
+                        <p id="mens_beach_3_price">590</p>
+                        <span id="mens_beach_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_beach_3_color" class="bg-white border-2 rounded p-1 font-bold">white</span>
+                        <span id="mens_beach_3_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="mens_beach_4" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_beach_4_image" src="./images/B1.png" alt="beachwear">
+                        <p id="mens_beach_4_price">590</p>
+                        <span id="mens_beach_4_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_beach_4_color" class="bg-yellow-300 border-2 rounded p-1 font-bold">Yellow</span>
+                        <span id="mens_beach_4_occasion" class="bg-gray-300 border-2  rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="mens_summer_1" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_summer_1_image" src="./images/S1.png" alt="summerwear">
+                        <p id="mens_summer_1_price">800</p>
+                        <span id="mens_summer_1_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_summer_1_color" class="bg-green-400 border-2 rounded p-1 font-bold">Green</span>
+                        <span id="mens_summer_1_occasion" class="bg-gray-300 border-2  rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <div id="mens_summer_2" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_summer_2_image" src="./images/S1.png" alt="summerwear">
+                        <p id="mens_summer_2_price">800</p>
+                        <span id="mens_summer_2_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_summer_2_color" class="bg-green-400 border-2 rounded p-1 font-bold">Green</span>
+                        <span id="mens_summer_2_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <div id="mens_summer_3" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_summer_3_image" src="./images/S1.png" alt="summerwear">
+                        <p id="mens_summer_3_price">800</p>
+                        <span id="mens_summer_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_summer_3_color" class="bg-black text-white border-2 rounded p-1 ">Black</span>
+                        <span id="mens_summer_3_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <div id="mens_summer_4" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_summer_4_image" src="./images/S1.png" alt="summerwear">
+                        <p id="mens_summer_4_price">800</p>
+                        <span id="mens_summer_4_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_summer_4_color" class="bg-black text-white border-2 rounded p-1">Black</span>
+                        <span id="mens_summer_4_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <!--womens-->
+                    <div id="womens_party_1" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_party_1_image"src="./images/W-P1.png" alt="womens partywear">
+                        <p id="womens_party_1_price">600</p>
+                        <span id="womens_party_1_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_party_1_color" class="bg-green-400 border-2 rounded p-1 font-bold">Green</span>
+                        <span id="womens_party_1_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="womens_party_2" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_party_2_image" src="./images/W-P1.png" alt="womens partywear">
+                        <p id="womens_party_2_price">600</p>
+                        <span id="womens_party_2_gender" class="bg-gray-300border-2  rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_party_2_color" class="bg-blue-700 border-2 rounded p-1 font-bold">Blue</span>
+                        <span id="womens_party_2_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="womens_party_3" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_party_3_image" src="./images/W-P1.png" alt="womens partywear">
+                        <p id="womens_party_3_price">600</p>
+                        <span id="womens_party_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_party_3_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="womens_party_3_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="womens_party_4" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_party_4_image" src="./images/W-P1.png" alt="womens partywear">
+                        <p id="womens_party_4_price">600</p>
+                        <span id="womens_party_4_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_party_4_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="womens_party_4_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Party</span>
+                    </div>
+                    <div id="womens_beach_1" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_beach_1_image" src="./images/W-B1.png" alt="womens beachwear">
+                        <p id="womens_beach_1_price">700</p>
+                        <span id="womens_beach_1_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_beach_1_color" class="bg-yellow-300 border-2 rounded p-1 font-bold">Yellow</span>
+                        <span id="womens_beach_1_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="womens_beach_2" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_beach_2_image" src="./images/W-B1.png" alt="womensbeachwear">
+                        <p id="womens_beach_2_price">700</p>
+                        <span id="womens_beach_2_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_beach_2_color" class="bg-yellow-300 border-2 rounded p-1 font-bold">Yellow</span>
+                        <span id="womens_beach_2_occasion" class="bg-gray-300 border-2  rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="womens_beach_3" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_beach_3_image" src="./images/W-B1.png" alt="womens beachwear">
+                        <p id="womens_beach_3_price">700</p>
+                        <span id="womens_beach_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_beach_3_color" class="bg-yellow-300 border-2 rounded p-1 font-bold">Yellow</span>
+                        <span id="womens_beach_3_occasion" class="bg-gray-300 border-2  rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="womens_beach_4" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_beach_4_image" src="./images/W-B1.png" alt="womens beachwear">
+                        <p id="womens_beach_4_price">700</p>
+                        <span id="womens_beach_4_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_beach_4_color" class="bg-white border-2 rounded p-1 font-bold">white</span>
+                        <span id="womens_beach_4_occasion" class="bg-gray-300 border-2  rounded-r-xl p-1 font-bold">Beach</span>
+                    </div>
+                    <div id="womens_summer_1" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_summer_1_image" src="./images/W-S1.png" alt="womens summerwear">
+                        <p id="womens_summer_1_price">480</p>
+                        <span id="womens_summer_1_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_summer_1_color" class="bg-blue-700 border-2 rounded p-1 font-bold">Blue</span>
+                        <span id="womens_summer_1_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <div id="womens_summer_2" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_summer_2_image" src="./images/W-S1.png" alt="womens summerwear">
+                        <p id="womens_summer_2_price">480</p>
+                        <span id="womens_summer_2_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_summer_2_color" class="bg-black text-white border-2 rounded p-1 ">Black</span>
+                        <span id="womens_summer_2_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <div id="womens_summer_3" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_summer_3_image" src="./images/W-S1.png" alt="womens summerwear">
+                        <p id="womens_summer_3_price">480</p>
+                        <span id="womens_summer_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_summer_3_color" class="bg-blue-700 border-2 rounded p-1 font-bold">Blue</span>
+                        <span id="womens_summer_3_occasion" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <div id="womens_summer_4" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_summer_4_image" src="./images/W-S1.png" alt="womens summerwear">
+                        <p id="womens_summer_4_price">480</p>
+                        <span id="womens_summer_4_gender" class="bg-gray-300border-2  rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_summer_4_color" class="bg-black text-white border-2 rounded p-1 ">Black</span>
+                        <span id="womens_summer_4_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Summer</span>
+                    </div>
+                    <!--Others-->
+                    <div id="unisex_1" class="m-1 border border-black h-auto p-1">
+                        <img id="unisex_1_image" src="./images/Uni-1.png" alt="unisex wear">
+                        <p id="unisex_1_price">380</p>
+                        <span id="unisex_1_gender" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Unisex</span>
+                        <span id="unisex_1_color" class="border-2 bg-yellow-300 rounded p-1 ">Brown</span>
+                    </div>
+                    <div id="unisex_2" class="m-1 border border-black h-auto p-1">
+                        <img id="unisex_2_image" src="./images/Uni-1.png" alt="unisex wear">
+                        <p id="unisex_2_price">380</p>
+                        <span id="unisex_2_gender" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Unisex</span>
+                        <span id="unisex_2_color" class="bg-blue-700 border-2 rounded p-1 font-bold">blue</span>
+                    </div>
+                    <div id="unisex_3" class="m-1 border border-black h-auto p-1">
+                        <img id="unisex_3_image" src="./images/Uni-1.png" alt="unisex wear">
+                        <p id="unisex_3_price">380</p>
+                        <span id="unisex_3_gender" class="bg-gray-300 border-2  rounded-r-xl p-1 font-bold">Unisex</span>
+                        <span id="unisex_3_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                    </div>
+                    <div id="unisex_4" class="m-1 border border-black h-auto p-1">
+                        <img id="unisex_4_image" src="./images/Uni-1.png" alt="unisex wear">
+                        <p id="unisex_4_price">380</p>
+                        <span id="unisex_4_gender" class="bg-gray-300 border-2 rounded-r-xl p-1 font-bold">Unisex</span>
+                        <span id="unisex_4_color" class="bg-white border-2 rounded p-1 font-bold">white</span>
+                    </div>
+                    <!--weddingwears MEN and WoOMEN-->
+                    <div id="mens_wedding_1" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_wedding_1_image" src="./images/Wed-M-1.png" alt="weddingwear">
+                        <p id="mens_wedding_1_price">1900</p>
+                        <span id="mens_wedding_1_gender"class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold" >Men</span>
+                        <span id="mens_wedding_1_color" class="bg-pink-400 border-2 rounded p-1 font-bold">Pink</span>
+                        <span id="mens_wedding_1_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+                    <div id="mens_wedding_2" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_wedding_2_image" src="./images/Wed-M-1.png" alt="weddingwear">
+                        <p id="mens_wedding_2_price">1900</p>
+                        <span id="mens_wedding_2_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_wedding_2_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="mens_wedding_2_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+                    <div id="mens_wedding_3" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_wedding_3_image" src="./images/Wed-M-1.png" alt="weddingwear">
+                        <p id="mens_wedding_3_price">1900</p>
+                        <span id="mens_wedding_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_wedding_3_color" class="bg-pink-400 border-2 rounded p-1 font-bold">Pink</span>
+                        <span id="mens_wedding_3_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+                    <div id="mens_wedding_4" class="m-1 border border-black h-auto p-1">
+                        <img id="mens_wedding_4_image" src="./images/Wed-M-1.png" alt="weddingwear">
+                        <p id="mens_wedding_4_price">1900</p>
+                        <span id="mens_wedding_4_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Men</span>
+                        <span id="mens_wedding_4_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="mens_wedding_4_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+                    <div id="womens_wedding_1" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_wedding_1_image" src="./images/Wed-W-1.png" alt="weddingwear women">
+                        <p id="womens_wedding_1_price">2100</p>
+                        <span id="womens_wedding_1_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_wedding_1_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="womens_wedding_1_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+                    <div id="womens_wedding_2" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_wedding_2_image" src="./images/Wed-W-1.png" alt="weddingwear women">
+                        <p id="womens_wedding_2_price">2100</p>
+                        <span id="womens_wedding_2_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_wedding_2_color" class="bg-indigo-400 border-2 rounded p-1 font-bold">Indigo</span>
+                        <span id="womens_wedding_2_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+                    <div id="womens_wedding_3" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_wedding_3_image" src="./images/Wed-W-1.png" alt="weddingwear women">
+                        <p id="womens_wedding_3_price">2100</p>
+                        <span id="womens_wedding_3_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_wedding_3_color" class="bg-red-500 border-2 rounded p-1 font-bold">Red</span>
+                        <span id="womens_wedding_3_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+                    <div id="womens_wedding_4" class="m-1 border border-black h-auto p-1">
+                        <img id="womens_wedding_4_image" src="./images/Wed-W-1.png" alt="weddingwear women">
+                        <p id="womens_wedding_4_price">2100</p>
+                        <span id="womens_wedding_4_gender" class="bg-gray-300 border-2 rounded-l-xl p-1 font-bold">Women</span>
+                        <span id="womens_wedding_4_color" class="bg-indigo-400 border-2 rounded p-1 font-bold">Indigo</span>
+                        <span id="womens_wedding_4_occasion" class="bg-gray-300  border-2 rounded-r-xl p-1 font-bold">Wedding</span>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+     <!--New-Letter-section-->
+    <div class=" m-3 text-center border border-black">
+        <h1 id="subscribesection" class="font-extrabold text-4xl mt-5 text-center">Join Our News Letter</h1>
+        <p class="font-medium text-3xl">Sign for our email Newspaper to get exclusive Discounts, Updates and More</p>
+        <input type="text" class="border border-black rounded p-2 m-3" style="width:70%;">
+        <br>
+        <button class="bg-black text-white p-2 m-3 rounded ">SUBSCRIBE</button>
+    </div>
+
+    <!--Footer-Section-->
+    <div class="m-3 bg-cyan-950 p-10 flex flex-col gap-5">
+        <h1 class="font-extrabold text-4xl text-gray-600">NOSTRA</h1>
+        <p class="text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente modi asperiores libero eum provident beatae corrupti tenetur aperiam. Rem placeat nisi quae, minus obcaecati veniam nostrum architecto maxime facilis?</p>
+        <p class="text-gray-400">@ 2026 Nostra.com</p>
+    </div>
+    
+    
+    
+    <script src="collections.js"></script>
+</body>
+</html>
