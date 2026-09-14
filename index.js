@@ -21,6 +21,19 @@ subscribe.addEventListener("click",function(){
     subscribesection.scrollIntoView()
 })
 
+//sidemini navbar----------------------------------------->
+var menubutton = document.getElementById("menubutton")
+var closemenu = document.getElementById("closemenu")
+var sidenav = document.getElementById("sidenav")
+
+menubutton.addEventListener("click", function(){
+    sidenav.classList.remove("translate-x-full")
+})
+
+closemenu.addEventListener("click", function(){
+    sidenav.classList.add("translate-x-full")
+})
+
 //for AdImageSlide on *rightclick AND for *leftclick-------->
 //Rightclick
 var imageindex=0

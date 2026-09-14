@@ -81,18 +81,38 @@
     </div>
 
     <!--Main nav-bar -->
-    <div class=" sticky top-0 z-50 flex m-1 p-5 w-auto bg-white items-center justify-between max-sm:p-2 max-sm:m-1">
-        <div class="text-3xl font-bold  ml-0 max-sm:text-lg max-sm:ml-1 ">Nostra</div>
-        <button id="menubutton" class="hidden">
-        <wa-icon name="bars" style="color: rgb(255, 255, 255);"></wa-icon>
+    <div class="sticky top-0 z-50 flex m-1 p-5 w-auto bg-white items-center justify-between max-sm:p-2 max-sm:m-1">
+        <div class="text-3xl font-bold ml-0 max-sm:text-lg max-sm:ml-1">Nostra</div>
+
+        <button id="menubutton" class="block sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18.67" height="16" viewBox="0 0 28 24">
+            <path d="M0 0h28v24H0z" fill="none" />
+            <path fill="currentColor" d="M2.61 0h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22m0 9.39h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22m0 9.391h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22" />
+        </svg>
         </button>
 
-        <div class=" flex gap-14 items-center  mr-2 font-medium max-sm:gap-3 max-sm:text-sm">
-            <p id="newarrivals" class="cursor-pointer  hover:underline hover:text-black">New Arrivals</p>
-            <p id="mostwanted" class="cursor-pointer  hover:underline hover:text-black">Most Wanted 
-            <p><a class="hover:underline hover:text-black" href="C:\Users\--HRISHI--\OneDrive\Desktop\-FullstackDevProgram-EMC\Nostra project\collections.html">Collections</a></p>
-            <p id="subscribe" class="cursor-pointer  hover:underline hover:text-black">Subscribe</p>
-            <p><a class="hover:underline hover:text-black" href="C:\Users\--HRISHI--\OneDrive\Desktop\-FullstackDevProgram-EMC\Nostra project\contact.html">Contact Us</a></p>
+        <div class="hidden sm:flex gap-14 items-center mr-2 font-medium">
+            <p id="newarrivals" class="cursor-pointer hover:underline hover:text-black">New Arrivals</p>
+            <p id="mostwanted" class="cursor-pointer hover:underline hover:text-black">Most Wanted</p>
+            <p><a class="hover:underline hover:text-black" href="collections.html">Collections</a></p>
+            <p id="subscribe" class="cursor-pointer hover:underline hover:text-black">Subscribe</p>
+            <p><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></p>
+        </div>
+    </div>
+
+    <!-- Mobile Side Navigation -->
+    <div id="sidenav" class="fixed top-0 right-0 h-full w-72 bg-gray-900 text-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden">
+
+        <div class="flex justify-end p-5">
+        <button id="closemenu" class="text-2xl">✕</button>
+        </div>
+
+        <div class="flex flex-col gap-8 p-5 text-xl">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="#newarrivalssection">New Arrival</a></p>
+        <p><a href="#mostwantedsection">Most Wanted</a></p>
+        <p><a href="collections.html">Collections</a></p>
+        <p><a href="contact.html">Contact Us</a></p>
         </div>
     </div>
 
