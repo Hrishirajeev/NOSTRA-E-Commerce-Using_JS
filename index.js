@@ -22,9 +22,9 @@ subscribe.addEventListener("click",function(){
 })
 
 //sidemini navbar----------------------------------------->
-var menubutton = document.getElementById("menubutton")
-var closemenu = document.getElementById("closemenu")
-var sidenav = document.getElementById("sidenav")
+let menubutton = document.getElementById("menubutton")
+let closemenu = document.getElementById("closemenu")
+let sidenav = document.getElementById("sidenav")
 
 menubutton.addEventListener("click", function(){
     sidenav.classList.remove("translate-x-full")
