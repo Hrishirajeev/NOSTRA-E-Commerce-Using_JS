@@ -39,12 +39,6 @@ A responsive fashion e-commerce website built using **HTML, Tailwind CSS, and Ja
 
 - Tailwind CSS utility classes
 - DOM manipulation
-- JavaScript event listeners
-- `forEach()`
-- `includes()`
-- `toLowerCase()`
-- `style.display`
-- CSS `relative` and `absolute` positioning
 - Image overlay technique
 - Responsive design using Tailwind CSS
 
