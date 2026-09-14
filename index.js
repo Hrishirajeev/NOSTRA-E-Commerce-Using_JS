@@ -108,3 +108,21 @@ mostwantedcarousel.addEventListener("click", function(event) {
     }
 
 });
+
+//Find every heart icon on the page (one per product card)
+// Find every heart icon on the page (one per product card)
+document.querySelectorAll(".wishlist-icon").forEach(function(svg) {
+
+    // Attach a click listener to each one separately
+    svg.addEventListener("click", function() {
+
+        // Grab the actual heart-shaped path inside THIS svg
+        var heart = svg.querySelector(".wishlist-heart");
+
+        // Check its current color before deciding what to switch it to
+        var isRed = heart.getAttribute("fill") === "red";
+
+        // Toggle: white -> red, red -> white
+        heart.setAttribute("fill", isRed ? "#fff" : "red");
+    });
+});

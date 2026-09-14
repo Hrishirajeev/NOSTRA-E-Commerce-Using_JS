@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nostra</title>
+
+    <!--Fontawesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <!--TailwindCss Link Connection-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet"></head>
     
-    <!---Inner Css-->
-        <style>
+    
+    <style>
+        html, body {
+        overflow-x: hidden;
+        }
+
         #mostwantedcarousel::-webkit-scrollbar {
         display: none;
         }
@@ -18,28 +25,73 @@
         #mostwantedcarousel {
         scrollbar-width: none;
         }
-        </style>
-    <!---Inner Css-->
+
+        @media screen and (max-width: 640px) {
+        #menubutton {
+        display: block;
+        }
+        @media screen and (max-width: 640px) {
+
+        #banner > img {
+        height: 210px;
+        object-fit: cover;
+    }
+
+        #banner p:first-child {
+         font-size: 30px;
+        line-height: 1.1;
+        text-align: center;
+        width: 75%;
+    }
+
+        #banner p:nth-child(2) {
+        font-size: 20px;
+        text-align: center;
+    }
+
+        #rightclick {
+        right: 20px;
+        margin-right: 0;
+        width: 50px;
+    }
+
+        #leftclick {
+        left: 20px;
+        margin-left: 0;
+        width: 50px;
+    }
+
+        #rightclick svg,
+        #leftclick svg {
+        width: 55px;
+        height: 55px;
+    }}}
+    </style>
+    
+
 </head>
 <body>
 
     <!--Short Ad sale nav-section -->
-    <div id="salebar" class=" flex justify-center bg-cyan-950 h-auto w-auto p-1">
-        <div class="flex w-auto  gap-16 text-white font-semibold text-2xl  ">
-            <p>Sign Up and GET 20%OFF For Your First Order</p>
-            <div id="close">X</div>
+    <div id="salebar" class=" flex justify-center bg-cyan-950 h-auto w-auto p-2">
+        <div class="flex w-auto  gap-16 text-white font-semibold text-2xl max-sm:text-sm max-sm:gap-3 ">
+            <p class="font-bold">Sign Up and GET 20%OFF For Your First Order</p>
+            <div id="close" class=" font-bold cursor-pointer text-gray-400">x</div>
         </div>
     </div>
 
     <!--Main nav-bar -->
-    <div class=" sticky top-0 z-50 flex m-1 w-auto bg-white p-4  items-center justify-between">
-        <div class="text-2xl font-bold  ml-2 ">NOSTRA</div>
+    <div class=" sticky top-0 z-50 flex m-1 p-5 w-auto bg-white items-center justify-between max-sm:p-2 max-sm:m-1">
+        <div class="text-3xl font-bold  ml-0 max-sm:text-lg max-sm:ml-1 ">Nostra</div>
+        <button id="menubutton" class="hidden">
+        <wa-icon name="bars" style="color: rgb(255, 255, 255);"></wa-icon>
+        </button>
 
-        <div class=" flex gap-5 items-center  mr-2 font-medium ">
-            <p id="newarrivals">New Arrivals</p>
-            <p id="mostwanted">Most Wanted 
+        <div class=" flex gap-14 items-center  mr-2 font-medium max-sm:gap-3 max-sm:text-sm">
+            <p id="newarrivals" class="cursor-pointer  hover:underline hover:text-black">New Arrivals</p>
+            <p id="mostwanted" class="cursor-pointer  hover:underline hover:text-black">Most Wanted 
             <p><a class="hover:underline hover:text-black" href="C:\Users\--HRISHI--\OneDrive\Desktop\-FullstackDevProgram-EMC\Nostra project\collections.html">Collections</a></p>
-            <p id="subscribe">Subscribe</p>
+            <p id="subscribe" class="cursor-pointer  hover:underline hover:text-black">Subscribe</p>
             <p><a class="hover:underline hover:text-black" href="C:\Users\--HRISHI--\OneDrive\Desktop\-FullstackDevProgram-EMC\Nostra project\contact.html">Contact Us</a></p>
         </div>
     </div>
@@ -48,41 +100,41 @@
     <div class="m-1 border w-auto h-auto">
 
         <div id="banner" class="relative flex  w-auto h-auto  ">
-            <img id="adimage" src="./images/Ad1.webp" alt="background-fashion-style" class="w-full  h-96 object-cover transition-opacity duration-500">
+            <img id="adimage" src="./images/Ad1.webp" alt="background-fashion-style" class="max-sm:h-[55vh] w-full  h-96 object-cover transition-opacity duration-500">
             <div class="absolute inset-0 bg-black bg-opacity-70"></div>
             <!-- Right Arrow -->
-            <div id="rightclick" class="absolute z-10 font-bold text-9xl text-white  w-24 right-32 top-1/2 mr-4 -mt-11">
+            <div id="rightclick" class="absolute z-10 font-bold text-9xl text-white w-24 right-32 top-1/2 mr-10 -mt-11 max-sm:w-8 max-sm:scale-50 max-sm:right-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="148" height="148" viewBox="0 0 1024 1024">
 	            <path d="M0 0h1024v1024H0z" fill="none" />
 	            <path fill="#fff" d="M338.8 104.7a64 64 0 0 0 0 90.5L655.6 512L338.8 828.8a64 64 0 0 0 90.4 90.5l362.1-362a64 64 0 0 0 0-90.5l-362-362.1a64 64 0 0 0-90.5 0" />
                 </svg>
             </div>
             <!-- Left Arrow -->
-            <div id="leftclick" class="absolute z-10 font-bold text-9xl text-white  w-24 left-28 top-1/2 mr-4 -mt-11">
+            <div id="leftclick" class="absolute z-10 font-bold text-9xl text-white w-24 left-0 top-1/2 ml-2 -mt-11 max-sm:w-8 max-sm:scale-50 max-sm:left-0 max-sm:ml-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="148" height="148" viewBox="0 0 1024 1024">
 	            <path d="M0 0h1024v1024H0z" fill="none" />
 	            <path fill="#fff" d="M685.2 104.7a64 64 0 0 1 0 90.5L368.4 512l316.8 316.8a64 64 0 0 1-90.4 90.5l-362.1-362a64 64 0 0 1 0-90.5l362-362.1a64 64 0 0 1 90.5 0" />
                 </svg>
             </div>
             <!-- Center Ad quote text -->
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                <p class="text-6xl font-extrabold text-white">Level Up Your Style With Our</p>
-                <p class="text-2xl font-extrabold text-white">summer collections</p>
-                <button class="border border-black bg-gray-200 rounded p-2">Shop Now</button>
+            <div class="absolute inset-0 flex flex-col items-center gap-3 justify-center">
+                <p class="text-6xl font-extrabold text-white max-sm:text-3xl">Level Up Your Style With Our</p>
+                <p class="text-2xl font-extrabold text-white max-sm:text-lg">summer collections</p>
+                <button class="px-5 py-2 rounded bg-gray-600 text-white hover:bg-black hover:text-white">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
 
     <!--BRANDS-section-->
-    <div class="m-1 w-auto h-auto">
+    <div class="m-1 mt-12 w-auto h-auto">
         <p class="text-2xl font-bold p-2">Popular Brands</p>
         
         <!--Grid divide div to 7-->
-        <div class="m-1 grid grid-cols-7 gap-2">
+        <div class="class=m-1 mt-5 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-2">
 
         <!-- Puma -->
-        <div class=" h-56 flex flex-col">
-            <div class="h-44 flex items-center justify-center">
+        <div class=" h-36 flex flex-col">
+            <div class="h-28 flex items-center justify-center">
                 <img src="./images/puma.webp" class="max-w-full max-h-full object-contain">
             </div>
             <div class="h-12 flex text-center justify-center px-2 text-2xl font-medium text-gray-500">
@@ -91,8 +143,8 @@
         </div>
 
         <!-- Lewis -->
-        <div class=" h-56 flex flex-col">
-            <div class="h-44 flex items-center justify-center">
+        <div class=" h-36 flex flex-col">
+            <div class="h-28 flex items-center justify-center">
                 <img src="./images/lewis.webp" class="max-w-full max-h-full object-contain">
             </div>
             <div class="h-12 flex text-center justify-center px-2 text-2xl font-medium text-gray-500">
@@ -101,8 +153,8 @@
         </div>
 
         <!-- Adidas -->
-        <div class=" h-56 flex flex-col">
-            <div class="h-44 flex items-center justify-center">
+        <div class=" h-36 flex flex-col">
+            <div class="h-28 flex items-center justify-center">
                 <img src="./images/addi.webp" class="max-w-full max-h-full object-contain">
             </div>
             <div class="h-12 flex text-center justify-center px-2 text-2xl font-medium text-gray-500">
@@ -111,8 +163,8 @@
         </div>
 
         <!-- Lacoste -->
-        <div class=" h-56 flex flex-col">
-            <div class="h-44 flex items-center justify-center">
+        <div class=" h-36 flex flex-col">
+            <div class="h-28 flex items-center justify-center">
                 <img src="./images/lacos.webp" class="max-w-full max-h-full object-contain">
             </div>
             <div class="h-12 flex text-center justify-center px-2 text-2xl font-medium text-gray-500">
@@ -121,8 +173,8 @@
         </div>
 
         <!-- Fred Perry -->
-        <div class=" h-56 flex flex-col">
-            <div class="h-44 flex items-center justify-center">
+        <div class=" h-36 flex flex-col">
+            <div class="h-28 flex items-center justify-center">
                 <img src="./images/fredpe.webp" class="max-w-full max-h-full object-contain">
             </div>
             <div class="h-12 flex text-center justify-center px-2 text-2xl font-medium text-gray-500">
@@ -131,8 +183,8 @@
         </div>
 
         <!-- H&M -->
-        <div class=" h-56 flex flex-col">
-            <div class="h-44 flex items-center justify-center">
+        <div class=" h-36 flex flex-col">
+            <div class="h-28 flex items-center justify-center">
                 <img src="./images/hm.webp" class="max-w-full max-h-full object-contain">
             </div>
             <div class="h-12 flex text-center justify-center px-2 text-2xl font-medium text-gray-500">
@@ -141,8 +193,8 @@
         </div>
 
         <!-- Polo -->
-        <div class=" h-56 flex flex-col">
-            <div class="h-44 flex items-center justify-center">
+        <div class=" h-36 flex flex-col">
+            <div class="h-28 flex items-center justify-center">
                 <img src="./images/polo.webp" class="max-w-full max-h-full object-contain">
             </div>
             <div class="h-12 flex text-center justify-center px-2 text-2xl font-medium text-gray-500">
@@ -155,33 +207,35 @@
     </div>
 
     <!--What we do Part1 section-->
-    <div class=" flex m-1 justify-between items-center  w-auto h-auto">
-        <div class="h-18 text-4xl font-bold p-2"><p class="text-3xl font-bold">We Provide best <br>customer Experiences</p></div>
+    <div class="flex m-1 justify-between items-center mt-16 w-auto h-auto max-sm:flex-col max-sm:items-start max-sm:gap-3">
+        <div class="h-18 text-4xl font-bold p-2"><p class="text-4xl font-bold">We Provide best <br>customer Experiences</p></div>
         <div><p class="text-2xl font-normal mr-2">|| We Ensure that our customer have the  best shopping experience</p></div> 
     </div>
 
     <!--What we do Part2 section of boxes-->
-    <div class="m-2  grid grid-cols-4 gap-2 w-auto h-auto ">
+    <div class="m-2 mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2 w-auto h-auto">
 
-        <div class="m-1 bg-blue-50 rounded-2xl h-auto p-1">
+        <div class="m-1 bg-blue-50 rounded-2xl h-auto p-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
 	        <path d="M0 0h24v24H0z" fill="none" />
 	        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4l8-8z" />
             </svg>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid libero laudantium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
+            <p class="font-bold mt-2">Original Products</p>
+            <p>Lorem ipsum dolor sit amet constium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
         </div>
 
-        <div class="m-1 bg-blue-50 rounded-2xl p-1">
+        <div class="m-1 bg-blue-50 rounded-2xl p-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
 	        <path d="M0 0h24v24H0z" fill="none" />
 	        <path fill="currentColor" d="M8.5 9a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3m7 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S16.33 9 15.5 9" />
 	        <path fill="currentColor" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8" />
 	        <path fill="currentColor" d="M14.83 14.83a3.94 3.94 0 0 1-2.02 1.09a4.05 4.05 0 0 1-2.37-.23a3.9 3.9 0 0 1-1.27-.86c-.18-.18-.34-.38-.49-.59l-1.66 1.12c.22.32.46.62.73.88c.27.27.57.52.89.73s.66.4 1.02.55s.74.27 1.13.35a6.1 6.1 0 0 0 2.42 0c.38-.08.76-.2 1.13-.35c.36-.15.7-.34 1.02-.55s.62-.46.89-.73s.52-.57.73-.89l-1.66-1.12c-.14.21-.31.41-.49.59Z" />
             </svg>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid libero laudantium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
+            <p class="font-bold mt-2">Satisfaction Guarantee</p>
+            <p>Lorem ipsum dolor sit amet constium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
         </div>
 
-        <div class="m-1 bg-blue-50 rounded-2xl h-auto p-1">
+        <div class="m-1 bg-blue-50 rounded-2xl h-auto p-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
 	        <path d="M0 0h24v24H0z" fill="none" />
 	        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -191,165 +245,186 @@
 		    <path d="M9 17.5h6" />
 	        </g>
             </svg>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid libero laudantium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
+            <p class="font-bold mt-2">New Arrival Everyday</p>
+            <p>Lorem ipsum dolor sit amet constium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
         </div>
 
-        <div class="m-1 bg-blue-50 rounded-2xl h-auto p-1">
+        <div class="m-1 bg-blue-50 rounded-2xl h-auto p-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 640 640">
 	        <path d="M0 0h640v640H0z" fill="none" />
 	        <path fill="currentColor" d="M64 160c0-35.3 28.7-64 64-64h288c35.3 0 64 28.7 64 64v32h50.7c17 0 33.3 6.7 45.3 18.7l45.3 45.3c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64h-3.3c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64H300.7c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64H128c-35.3 0-64-28.7-64-64v-48H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h112c13.3 0 24-10.7 24-24s-10.7-24-24-24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h176c13.3 0 24-10.7 24-24s-10.7-24-24-24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24zm512 192v-50.7L530.7 256H480v96zM256 488c0-22.1-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40s40-17.9 40-40m232 40c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40" />
             </svg>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid libero laudantium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
+            <p class="font-bold mt-2"> Fast & Free Shipping</p>
+            <p>Lorem ipsum dolor sit amet constium earum esse dicta neque nam ad et voluptatem voluptatum ipsum optio deleniti consequuntur itaque, quod at est vero.</p>
         </div>
     </div>
 
     <!--New-Arrivals-Section-->
-    <div class="m-1  w-auto h-auto">
+    <div class="m-1 mt-12  w-auto h-auto">
         <p id="newarrivalssection" class="text-2xl font-bold p-2">New Arrivals</p>
 
-        <div class="m-1 flex gap-8  w-auto h-auto relative">
+        <div class="m-2 mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 md:gap-12 w-auto h-auto relative">
 
-            <div class="m-1 w-auto h-96 relative">
-                <img src="./images/tshirt.avif" alt="tshirt" class="w-full h-full object-cover p-1">
-                <button class="absolute top-44 right-36 border border-black bg-gray-200 rounded p-2">Shop Now</button>
+            <div class="m-1 w-full h-96 relative">
+                <img src="./images/tshirt.avif" alt="tshirt" class="rounded-2xl w-full h-full object-cover">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="px-5 py-2 rounded bg-gray-600 text-white hover:bg-black hover:text-white">
+                        Shop Now <i class="fa-solid fa-arrow-right"></i>
+                    </button>            
+                </div>
             </div>
 
-            <div class="m-1 w-auto h-96 relative">
-                <img src="./images/pant.avif" alt="pant" class="w-full h-full object-cover p-1">
-                <button class="absolute top-44 right-36 border border-black bg-gray-200 rounded p-2">Shop Now</button>
+            <div class="m-1 w-full h-96 relative">
+                <img src="./images/pant.avif" alt="pant" class="rounded-2xl w-full h-full object-cover">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="px-5 py-2 rounded bg-gray-600 text-white hover:bg-black hover:text-white">
+                        Shop Now <i class="fa-solid fa-arrow-right"></i>
+                    </button>            
+                </div>
             </div>
 
-            <div class="m-1 w-auto h-96 relative">
-                <img src="./images/jack.avif" alt="jacket" class="w-full h-full object-cover p-1">
-                <button class="absolute top-44 right-24 border border-black bg-gray-200 rounded p-2">Shop Now</button>
+            <div class="m-1 w-full h-96 relative">
+                <img src="./images/jack.avif" alt="jacket" class=" rounded-2xl w-full h-full object-cover">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="px-5 py-2 rounded bg-gray-600 text-white hover:bg-black hover:text-white">
+                        Shop Now <i class="fa-solid fa-arrow-right"></i>
+                    </button>            
+                </div>
             </div>
 
-            <div class="m-1 w-auto h-96 relative">
-                <img src="./images/outfit pop.avif" alt="outfit" class=" w-full h-full object-cover  p-1">
-                <button class="absolute top-44 right-24 border border-black bg-gray-200 rounded p-2">Shop Now</button>
+            <div class="m-1 w-full h-96 relative">
+                <img src="./images/outfit pop.avif" alt="outfit" class=" rounded-2xl w-full h-full object-cover">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="px-5 py-2 rounded bg-gray-600 text-white hover:bg-black hover:text-white">
+                        Shop Now <i class="fa-solid fa-arrow-right"></i>
+                    </button>            
+                </div>
             </div>
 
-            <div class="m-1 rounded  w-auto h-96 relative">
-                <img src="./images/tshirt.avif" alt="tshirt" class="w-full h-full object-cover p-1">
-                <button class="absolute top-44 right-36 border border-black bg-gray-200 rounded p-2">Shop Now</button>
+            <div class="m-1  w-full h-96 relative">
+                <img src="./images/tshirt.avif" alt="tshirt" class="rounded-2xl w-full h-full object-cover ">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="px-5 py-2 rounded bg-gray-600 text-white hover:bg-black hover:text-white">
+                        Shop Now <i class="fa-solid fa-arrow-right"></i>
+                    </button>            
+                </div>
             </div>
 
         </div>
     </div>
 
     <!--Most-Wanted-Section-->
-    <div id="mostwantedcarousel" class="m-1 w-full h-auto overflow-x-auto">
+    <div id="mostwantedcarousel" class="m-1 mt-12 w-full h-auto overflow-x-auto">
         <p id="mostwantedsection" class="text-2xl font-bold p-2">Most Wanted</p>
 
-        <div id="mostwantedtrack" class="m-3 flex gap-5  w-max">
+        <div id="mostwantedtrack" class="m-3 mt-5 flex gap-5  w-max">
 
-            <div class="w-1/2 h-72 shrink-0  relative">
-                <img src="./images/m1.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m1.avif" class=" rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0  relative">
-                <img src="./images/m2.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m2.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0 relative">
-                <img src="./images/m3.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m3.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0 relative">
-                <img src="./images/m4.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m4.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+               <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0  relative">
-                <img src="./images/m5.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m5.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0 relative">
-                <img src="./images/m6.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m6.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0 relative">
-                <img src="./images/m7.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m7.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0  relative">
-                <img src="./images/m8.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m8.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0  relative">
-                <img src="./images/m9.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m9.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
 
-            <div class="w-1/2 h-72 shrink-0 relative">
-                <img src="./images/m10.avif" class="w-full h-full object-cover">
+            <div class="w-[70vw] sm:w-1/2 h-72 shrink-0 relative">
+                <img src="./images/m10.avif" class="rounded w-full h-full object-cover">
                 <p class="absolute top-0.5 left-0.5 font-medium bg-red-500 rounded-r-2xl p-1">SALE</p>
                 <div class="absolute bottom-1 right-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <svg class="wishlist-icon cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 	            <path d="M0 0h24v24H0z" fill="none" />
-	            <path fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
+	            <path class="wishlist-heart" fill="#fff" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2m4.18 10.77L12 17l-4.18-4.23a2.794 2.794 0 0 1 0-3.95c1.09-1.1 2.82-1.1 3.91 0l.28.28l.28-.28c1.09-1.1 2.81-1.1 3.91 0a2.794 2.794 0 0 1 0 3.95Z" />
                 </svg>
                 </div>
             </div>
@@ -358,24 +433,24 @@
     </div>
 
     <!--Limited-Offer-Section-->
-    <div class=" flex m-1 justify-evenly  bg-emerald-950 w-auto h-auto ">
+    <div class=" flex m-1 mt-12 justify-evenly  bg-emerald-950 w-auto h-auto ">
         <div class="m-3 ">
-            <img src="./images/LO.avif" alt="sale banner" class="border border-dashed">
+            <img src="./images/LO.avif" alt="sale banner" class="rounded border border-dashed">
             <p class="text-5xl font-extrabold text-gray-300">Limited Offer</p><br>
             <p class="text-3xl font-extrabold text-gray-300">%OFF on this for the first 30 Customers</p>
-            <button class="border border-black bg-gray-200 rounded p-1 m-1">Shop Now</button></p>
+            <button class="px-5 py-2 m-1 rounded bg-green-700 text-white hover:bg-black hover:text-white">Shop Now  <i class="fa-solid fa-arrow-right"></i></button></p>
         </div>
         <div class="m-3 mt-7">
             <p class="text-5xl font-extrabold text-gray-300">Limited Offer</p><br>
             <p class="text-3xl font-extrabold text-gray-300">%OFF on this for the first 30 Customers</p>
-            <button class="border border-black bg-gray-200 rounded p-1 m-1">Shop Now</button></p>
-            <img src="./images/LO1.avif" alt="sale banner" class="border border-dashed">
+            <button class="px-5 py-2 m-1 rounded bg-green-700 text-white hover:bg-black hover:text-white">Shop Now  <i class="fa-solid fa-arrow-right"></i></button></p>
+            <img src="./images/LO1.avif" alt="sale banner" class="rounded border border-dashed">
         </div>
     </div>
 
     <!--New-Letter-section-->
-    <div class=" m-1 text-center">
-        <h1 id="subscribesection" class="font-extrabold text-4xl mt-5 text-center">Join Our News Letter</h1>
+    <div class=" m-1 p-7 text-center">
+        <h1 id="subscribesection" class="font-extrabold text-4xl mt-10 text-center">Join Our News Letter</h1>
         <p class="font-medium text-3xl">Sign for our email Newspaper to get exclusive Discounts, Updates and More</p>
         <input type="text" class="border border-black rounded p-2 m-3" style="width:70%;">
         <br>
@@ -383,7 +458,7 @@
     </div>
 
     <!--Footer-Section-->
-    <div class=" bg-cyan-950 p-10 flex flex-col gap-5">
+    <div class=" bg-cyan-950 p-12 flex flex-col w-auto h-auto gap-7">
         <h1 class="font-extrabold text-4xl text-gray-600">NOSTRA</h1>
         <p class="text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente modi asperiores libero eum provident beatae corrupti tenetur aperiam. Rem placeat nisi quae, minus obcaecati veniam nostrum architecto maxime facilis?</p>
         <p class="text-gray-400">@ 2026 Nostra.com</p>
