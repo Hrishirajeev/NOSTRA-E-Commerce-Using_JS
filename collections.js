@@ -109,33 +109,25 @@ let filteroccasion = [];
 
 occasioncheck[0].addEventListener("click", function(event) {
 
-    if (occasioncheck[0].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filteroccasion.push(event.target.value);
+            if (product_array[i].occasion === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
+        }
 
-        console.log("unchecked");
-
-        let index = filteroccasion.indexOf(event.target.value);
-
-        filteroccasion.splice(index, 1);
     }
-
-    //To Check and Match to Associated filter products//
-
-    for (let i = 0; i < product_array.length; i++) {
-
-        if (product_array[i].occasion === filteroccasion[0]) {
-
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
             document.getElementById(product_array[i].id).style.display = "block";
-
-        } else {
-
-            document.getElementById(product_array[i].id).style.display = "none";
-
         }
 
     }
@@ -145,32 +137,25 @@ occasioncheck[0].addEventListener("click", function(event) {
 
 occasioncheck[1].addEventListener("click", function(event) {
 
-    if (occasioncheck[1].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filteroccasion.push(event.target.value);
+            if (product_array[i].occasion === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
+        }
 
-        console.log("unchecked");
-
-        let index = filteroccasion.indexOf(event.target.value);
-
-        filteroccasion.splice(index, 1);
     }
-    //To Check and Match to Associated filter products//
-
-    for (let i = 0; i < product_array.length; i++) {
-
-        if (product_array[i].occasion === filteroccasion[0]) {
-
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
             document.getElementById(product_array[i].id).style.display = "block";
-
-        } else {
-
-            document.getElementById(product_array[i].id).style.display = "none";
-
         }
 
     }
@@ -178,32 +163,25 @@ occasioncheck[1].addEventListener("click", function(event) {
 });
 occasioncheck[2].addEventListener("click", function(event) {
 
-    if (occasioncheck[2].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filteroccasion.push(event.target.value);
+            if (product_array[i].occasion === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
+        }
 
-        console.log("unchecked");
-
-        let index = filteroccasion.indexOf(event.target.value);
-
-        filteroccasion.splice(index, 1);
     }
-    //To Check and Match to Associated filter products//
-
-    for (let i = 0; i < product_array.length; i++) {
-
-        if (product_array[i].occasion === filteroccasion[0]) {
-
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
             document.getElementById(product_array[i].id).style.display = "block";
-
-        } else {
-
-            document.getElementById(product_array[i].id).style.display = "none";
-
         }
 
     }
@@ -211,32 +189,25 @@ occasioncheck[2].addEventListener("click", function(event) {
 });
 occasioncheck[3].addEventListener("click", function(event) {
 
-    if (occasioncheck[3].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filteroccasion.push(event.target.value);
+            if (product_array[i].occasion === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
+        }
 
-        console.log("unchecked");
-
-        let index = filteroccasion.indexOf(event.target.value);
-
-        filteroccasion.splice(index, 1);
     }
-    //To Check and Match to Associated filter products//
-
-    for (let i = 0; i < product_array.length; i++) {
-
-        if (product_array[i].occasion === filteroccasion[0]) {
-
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
             document.getElementById(product_array[i].id).style.display = "block";
-
-        } else {
-
-            document.getElementById(product_array[i].id).style.display = "none";
-
         }
 
     }
@@ -249,65 +220,51 @@ let filtergender = [];
 
 gendercheck[0].addEventListener("click", function(event) {
 
-    if (gendercheck[0].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtergender.push(event.target.value);
-
-    } else {
-
-        console.log("unchecked");
-
-        let index = filtergender.indexOf(event.target.value);
-
-        filtergender.splice(index, 1);
-    }
-    //To Check and Match to Associated filter products//
-
-    for (let i = 0; i < product_array.length; i++) {
-
-        if (product_array[i].gender === filtergender[0]) {
-
-            document.getElementById(product_array[i].id).style.display = "block";
-
-        } else {
-
-            document.getElementById(product_array[i].id).style.display = "none";
+            if (product_array[i].gender === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
         }
 
     }
-    
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
+
+    }
+
 });
 gendercheck[1].addEventListener("click", function(event) {
 
-    if (gendercheck[1].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtergender.push(event.target.value);
+            if (product_array[i].gender === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
+        }
 
-        console.log("unchecked");
-
-        let index = filtergender.indexOf(event.target.value);
-
-        filtergender.splice(index, 1);
     }
-    //To Check and Match to Associated filter products//
-
-    for (let i = 0; i < product_array.length; i++) {
-
-        if (product_array[i].gender === filtergender[0]) {
-
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
             document.getElementById(product_array[i].id).style.display = "block";
-
-        } else {
-
-            document.getElementById(product_array[i].id).style.display = "none";
-
         }
 
     }
@@ -315,32 +272,25 @@ gendercheck[1].addEventListener("click", function(event) {
 });
 gendercheck[2].addEventListener("click", function(event) {
 
-    if (gendercheck[2].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtergender.push(event.target.value);
+            if (product_array[i].gender === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
+        }
 
-        console.log("unchecked");
-
-        let index = filtergender.indexOf(event.target.value);
-
-        filtergender.splice(index, 1);
     }
-    //To Check and Match to Associated filter products//
-
-    for (let i = 0; i < product_array.length; i++) {
-
-        if (product_array[i].gender === filtergender[0]) {
-
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
             document.getElementById(product_array[i].id).style.display = "block";
-
-        } else {
-
-            document.getElementById(product_array[i].id).style.display = "none";
-
         }
 
     }
@@ -353,235 +303,251 @@ let filtercolor = [];
 
 colorcheck[0].addEventListener("click", function(event) {
 
-    if (colorcheck[0].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtercolor.push(event.target.value);
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
-
-        console.log("unchecked");
-
-        let index = filtercolor.indexOf(event.target.value);
-
-        filtercolor.splice(index, 1);
-    }
-    
-    //To Check and Match to Associated filter products//
-    for (let i = 0; i < product_array.length; i++) {
-
-    if (product_array[i].color === filtercolor[0]) {
-
-        document.getElementById(product_array[i].id).style.display = "block";
-
-    } else {
-
-        document.getElementById(product_array[i].id).style.display = "none";
+        }
 
     }
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
 
-}
+    }
 
 });
 colorcheck[1].addEventListener("click", function(event) {
 
-    if (colorcheck[1].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtercolor.push(event.target.value);
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
-
-        console.log("unchecked");
-
-        let index = filtercolor.indexOf(event.target.value);
-
-        filtercolor.splice(index, 1);
-    }
-
-    //To Check and Match to Associated filter products//
-    for (let i = 0; i < product_array.length; i++) {
-
-    if (product_array[i].color === filtercolor[0]) {
-
-        document.getElementById(product_array[i].id).style.display = "block";
-
-    } else {
-
-        document.getElementById(product_array[i].id).style.display = "none";
+        }
 
     }
-}
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
+
+    }
 
 });
 colorcheck[2].addEventListener("click", function(event) {
 
-    if (colorcheck[2].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtercolor.push(event.target.value);
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
-
-        console.log("unchecked");
-
-        let index = filtercolor.indexOf(event.target.value);
-
-        filtercolor.splice(index, 1);
-    }
-
-    //To Check and Match to Associated filter products//
-    for (let i = 0; i < product_array.length; i++) {
-
-    if (product_array[i].color === filtercolor[0]) {
-
-        document.getElementById(product_array[i].id).style.display = "block";
-
-    } else {
-
-        document.getElementById(product_array[i].id).style.display = "none";
+        }
 
     }
-}
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
+
+    }
+
 });
 colorcheck[3].addEventListener("click", function(event) {
 
-    if (colorcheck[3].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtercolor.push(event.target.value);
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
-
-        console.log("unchecked");
-
-        let index = filtercolor.indexOf(event.target.value);
-
-        filtercolor.splice(index, 1);
-    }
-
-    //To Check and Match to Associated filter products//
-    for (let i = 0; i < product_array.length; i++) {
-
-    if (product_array[i].color === filtercolor[0]) {
-
-        document.getElementById(product_array[i].id).style.display = "block";
-
-    } else {
-
-        document.getElementById(product_array[i].id).style.display = "none";
+        }
 
     }
-}
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
+
+    }
 
 });
 colorcheck[4].addEventListener("click", function(event) {
 
-    if (colorcheck[4].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtercolor.push(event.target.value);
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
-
-        console.log("unchecked");
-
-        let index = filtercolor.indexOf(event.target.value);
-
-        filtercolor.splice(index, 1);
-    }
-
-    //To Check and Match to Associated filter products//
-    for (let i = 0; i < product_array.length; i++) {
-
-    if (product_array[i].color === filtercolor[0]) {
-
-        document.getElementById(product_array[i].id).style.display = "block";
-
-    } else {
-
-        document.getElementById(product_array[i].id).style.display = "none";
+        }
 
     }
-}
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
+
+    }
 
 });
 colorcheck[5].addEventListener("click", function(event) {
 
-    if (colorcheck[5].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-        filtercolor.push(event.target.value);
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-    } else {
+        }
 
-        console.log("unchecked");
+    }
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
 
-        let index = filtercolor.indexOf(event.target.value);
-
-        filtercolor.splice(index, 1);
     }
 
-    //To Check and Match to Associated filter products//
-    for (let i = 0; i < product_array.length; i++) {
+});
+colorcheck[6].addEventListener("click", function(event) {
 
-    if (product_array[i].color === filtercolor[0]) {
+    if (event.target.checked) {
 
-        document.getElementById(product_array[i].id).style.display = "block";
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
 
-    } else {
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
 
-        document.getElementById(product_array[i].id).style.display = "none";
+        }
 
-    }   
-}
+    }
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
+
+    }
+
+});
+colorcheck[7].addEventListener("click", function(event) {
+
+    if (event.target.checked) {
+
+        //To show Checked and Match to Associated filter products//
+        for (let i = 0; i < product_array.length; i++) {
+
+            if (product_array[i].color === event.target.value) {
+                document.getElementById(product_array[i].id).style.display = "block";
+            }
+            else {
+                document.getElementById(product_array[i].id).style.display = "none";
+            }
+
+        }
+
+    }
+    else {
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
+            document.getElementById(product_array[i].id).style.display = "block";
+        }
+
+    }
+
 });
 
+
 //-------------------------------For PriceRange filter--------------------------------->
-let pricerangecheck=document.getElementsByName("pricerangecheck")
+let pricerangecheck = document.getElementsByName("pricerangecheck")
 let filterpricerange = [];
 
 pricerangecheck[0].addEventListener("click", function(event) {
 
-    if (pricerangecheck[0].checked) {
+    if (event.target.checked) {
 
-        console.log("checked");
+        // To show products between 2000 - 2500
+        for (let i = 0; i < product_array.length; i++) {
 
-        filterpricerange.push(event.target.value);
+            let productprice = Number(product_array[i].price);
+            console.log(product_array[i].price, productprice);
 
-    } else {
+            if (productprice >= 2000 && productprice <= 2500) {
 
-        console.log("unchecked");
+                document.getElementById(product_array[i].id).style.display = "block";
 
-        let index = filterpricerange.indexOf(event.target.value);
+            } else {
 
-        filterpricerange.splice(index, 1);
-    }
+                document.getElementById(product_array[i].id).style.display = "none";
 
-    //**Checking Products According to Price Range by *NUMBER* converstion**
-    for (let i = 0; i < product_array.length; i++) {
-
-    let productprice = Number(product_array[i].price);
-
-    if (productprice >= 2000 && productprice <= 2500) {
-
-        document.getElementById(product_array[i].id).style.display = "block";
+            }
+        }
 
     } else {
 
-        document.getElementById(product_array[i].id).style.display = "none";
+        // When unchecked, show all products again
+        for (let i = 0; i < product_array.length; i++) {
 
+            document.getElementById(product_array[i].id).style.display = "block";
+
+        }
     }
-
-}
 
 });
+
 pricerangecheck[1].addEventListener("click", function(event) {
 
     if (pricerangecheck[1].checked) {
